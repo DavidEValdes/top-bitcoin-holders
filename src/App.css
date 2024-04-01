@@ -1,0 +1,106 @@
+:root {
+  --card-bg-color: rgba(255, 255, 255, 0.1); 
+  --text-color: #e0e0e0;
+  --primary-color: #ffffff; 
+  --secondary-color: #b1b3b8; 
+  --border-radius: 12px; 
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --backdrop-filter: blur(50px); 
+  background-image: url('https://i.pinimg.com/1200x/18/c4/3d/18c43dacb80feb708d9b5ef9c1e03c5d.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  margin-left: 35px;
+  display: flex;
+  font-size: 50px;
+}
+
+.input-field, .select-field {
+  width: 80%;
+  max-width: 500px; 
+  margin: 10px 0;
+  padding: 15px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  transition: transform 0.3s ease; 
+}
+
+.input-field:focus, .select-field:focus {
+  transform: scale(1.02); 
+  
+}
+
+.card {
+  background: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: .5px solid #f7931a;
+  width: 80%;
+  max-width: 700px; 
+  min-width: 700px;
+  min-height: 150px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card h1 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 2.4rem;
+}
+
+.card p {
+  margin: 20px 1 0;
+  font-size: 1rem; 
+}
+
+.holdings{
+  font-weight: bold; 
+  color:#f2ff00;
+  font-size: 18px;
+}
+
+.value{
+
+  font-weight: bold; 
+  color:#85BB65;
+  font-size: 18px;
+}
+
+
+.card:hover {
+  transform: translateY(-10px); 
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
