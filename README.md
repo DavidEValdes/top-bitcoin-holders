@@ -1,38 +1,49 @@
-# Web Development Project 5 - *Top Bitcoin Holders Dashboard*
+# Web Development Project 6 - *Name of App Here*
 
-Submitted by: **David Valdes**
+Submitted by: **Your Name Here**
 
-This web app: **Displays the top known bitcoin holdings by public companies**
+This web app: **insert description**
 
-Time spent: **8** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The list displays a list of data fetched using an API call**
-- [X] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-  - [X] *Total Companies*
-  - [X] *Total Percentage of Total Supply*
-- [X] **A search bar allows the user to search for an item in the fetched data**
-- [X] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [ ] **Clicking on an item in the list view displays more details about it**
+- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 
 The following **optional** features are implemented:
 
-- [X] Multiple filters can be applied simultaneously
-- [X] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
+The following **additional** features are implemented:
 
+* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
-![ScreenRecording2024-03-30at2 28 15AM-ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/crypto-dashboard/assets/36570117/94a92060-2bac-4be8-a647-dfcb6a28928a)
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
+
+## Notes
+
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2024] [David Valdes]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -43,4 +54,5 @@ The following **optional** features are implemented:
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing
+    See the License for the specific language governing permissions and
+    limitations under the License.

@@ -104,3 +104,30 @@ h1 {
 
 
 
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  border:1px dotted white;
+  background:#1d1f1d;
+  width:75px;
+}
+
+.home-button {
+  padding: 10px;
+  text-decoration: none; /* Removes underline */
+  transition: color 0.2s ease-in-out;
+  font-size: 25px;
+  color: black;
+  border-radius: 90px;
+  border: 4px solid#f7931a;
+  background-color: white;
+}
+
+.home-button:hover {
+  color: var(--secondary-color); /* Changes text color on hover */
+}
