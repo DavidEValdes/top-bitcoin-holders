@@ -1,21 +1,17 @@
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CryptoDash from './components/CryptoDash'; // Adjust the path as needed
 import './App.css'
-import CryptoDash from './components/CryptoDash'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-     <div className ="App">
-      <CryptoDash />
-     </div>
-    </>
-   
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<CryptoDash />} />
+       
+      </Routes>
+    </Router>
+  );
+};
 
-
-
-export default App
+export default App;
