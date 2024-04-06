@@ -138,7 +138,8 @@ h1 {
 }
 
 .Menu-item {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .menu-link {
@@ -146,6 +147,7 @@ h1 {
   text-decoration: none;
   display: flex;
   align-items: center;
+  
 }
 
 .menu-icon {
@@ -207,4 +209,26 @@ h1 {
   text-decoration: none; /* Removes the underline from the link */
   color: inherit; /* Inherits the text color from the parent */
   cursor: pointer; 
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: 20px;
+  font-family: var(--font-family);
+}
+
+.detail-info {
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
 }

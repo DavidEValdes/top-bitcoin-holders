@@ -199,13 +199,11 @@ const CryptoDash = () => {
         </BarChart>
       </ResponsiveContainer>
       </div>
-      
+
       
       <br></br>
       <br></br>
 
-
-      
       <ul className="no-bullets">
     {[...filteredCompanies].reverse().map((company, index) => (
       <Link 

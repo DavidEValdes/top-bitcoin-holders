@@ -14,8 +14,12 @@ const Sidebar = () => {
         <ul>
           <li className="Menu-item">
             <Link to="/" className="menu-link">
-              <i className="menu-icon tf-icons bx bx-home-circle"></i>
               <div>🏠 Dashboard</div>
+            </Link>
+          </li>
+          <li className="Menu-item">
+            <Link to="/" className="menu-link">
+              <div>ℹ️ About</div>
             </Link>
           </li>
           {/* Repeat for other menu items */}
