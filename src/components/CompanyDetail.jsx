@@ -42,7 +42,7 @@ const CompanyDetail = () => {
         <p>Current Value of Bitcoin Held: ${company.total_current_value_usd.toLocaleString()}</p>
         <p>Percentage of Total Supply Held: {company.percentage_of_total_supply}%</p>
         <p>Percent Change: {initialValueAvailable ? `${percentChange.toFixed(2)}%` : 'N/A'}</p>
-        {!initialValueAvailable && <p>Entry Value / Current Value Chart is not Available: No Entry Value</p>}
+        {!initialValueAvailable && <p>Entry Value / Current Value Chart is not Available: No Entry Value given by CoinGecko</p>}
       </div>
       {initialValueAvailable && (
         <div className="chart-container">
