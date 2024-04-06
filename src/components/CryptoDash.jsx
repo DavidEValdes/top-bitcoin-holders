@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link} from 'react-router-dom';
 import {
   BarChart,
   Bar,
@@ -206,25 +207,32 @@ const CryptoDash = () => {
 
       
       <ul className="no-bullets">
-        {filteredCompanies.map((company, index) => (
-          <li key={index} className="card">
-            <h1>{company.name}</h1>
-              <p>
-                Holds <span className="holdings">{company.total_holdings}</span> Bitcoins 
-                valued at $<span className="value">{company.total_current_value_usd.toLocaleString()}</span>
-              </p>
-            <ul>
-              <li>Symbol: {company.symbol}</li>
-              <li>Country: {company.country}</li>
-              <li>
-                Total Entry Value (USD): 
-                {company.total_entry_value_usd === 0 ? ' N/A' : `$${company.total_entry_value_usd.toLocaleString('en-US')}`}
-              </li>
-              <li>Percentage of Total Supply: {company.percentage_of_total_supply}%</li>
-            </ul>
+    {[...filteredCompanies].reverse().map((company, index) => (
+      <Link 
+        key={index} 
+        to={`/companies/${company.symbol}`} 
+        state={{ company }} 
+        className="card-link"
+      >
+      <li className="card">
+        <h1>{company.name}</h1>
+        <p>
+          Holds <span className="holdings">{company.total_holdings}</span> Bitcoins
+          valued at $<span className="value">{company.total_current_value_usd.toLocaleString()}</span>
+        </p>
+        <ul>
+          <li>Symbol: {company.symbol}</li>
+          <li>Country: {company.country}</li>
+          <li>
+            Total Entry Value (USD):
+            {company.total_entry_value_usd === 0 ? ' N/A' : `$${company.total_entry_value_usd.toLocaleString('en-US')}`}
           </li>
-        ))}
-      </ul>
+          <li>Percentage of Total Supply: {company.percentage_of_total_supply}%</li>
+        </ul>
+      </li>
+    </Link>
+    ))}
+  </ul>
     </div>
   );
 };

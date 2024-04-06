@@ -110,11 +110,9 @@ h1 {
 /* Add this to App.css */
 .App-sidebar {
   width: 250px;
-  /* Dark blue background */
   color: #FFFFFF;
   padding: 20px;
   height: 100vh;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -187,4 +185,26 @@ h1 {
 .App-content {
   background: none;
   background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency with the alpha value (0 is fully transparent, 1 is opaque) */
+}
+
+
+.detail-link {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  background: #f7931a;
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background 0.3s ease;
+}
+
+.detail-link:hover {
+  background: #e5831a;
+}
+
+.card-link {
+  text-decoration: none; /* Removes the underline from the link */
+  color: inherit; /* Inherits the text color from the parent */
+  cursor: pointer; 
 }
