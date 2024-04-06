@@ -7,8 +7,8 @@ const Sidebar = () => {
   return (
     <div className="App-sidebar">
       <div className="Header">
-        <img className="Logo" alt="crescent moon logo" src="https://img.icons8.com/fluency/344/full-moon.png"/>
-        <h3 className="Header-title">AstroDash</h3>
+        <img className="Logo" alt="crescent moon logo" src="https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png"/>
+        <h3 className="Header-title">BitDash</h3>
       </div>
       <div className="Menu">
         <ul>
