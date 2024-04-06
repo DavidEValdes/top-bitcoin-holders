@@ -232,3 +232,21 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.crypto-stats {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: 20px;
+  font-family: var(--font-family);
+}
+
+.bar-chart-container {
+  margin-left: 45px;
+  margin-right: 100px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}

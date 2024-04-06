@@ -38,11 +38,11 @@ const CompanyDetail = () => {
         <p>Symbol: {company.symbol}</p>
         <p>Country: {company.country}</p>
         <p>Bitcoin Holdings: {company.total_holdings}</p>
-        <p>Total Entry Value USD: {initialValueAvailable ? `$${company.total_entry_value_usd.toLocaleString()}` : 'N/A'}</p>
-        <p>Value of Bitcoin Held: ${company.total_current_value_usd.toLocaleString()}</p>
+        <p>Total Entry Value: {initialValueAvailable ? `$${company.total_entry_value_usd.toLocaleString()}` : 'N/A'}</p>
+        <p>Current Value of Bitcoin Held: ${company.total_current_value_usd.toLocaleString()}</p>
         <p>Percentage of Total Supply Held: {company.percentage_of_total_supply}%</p>
         <p>Percent Change: {initialValueAvailable ? `${percentChange.toFixed(2)}%` : 'N/A'}</p>
-        {!initialValueAvailable && <p>Initial Value / Current Value Chart is not Available</p>}
+        {!initialValueAvailable && <p>Entry Value / Current Value Chart is not Available: No Entry Value</p>}
       </div>
       {initialValueAvailable && (
         <div className="chart-container">

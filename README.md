@@ -20,9 +20,6 @@ The following **optional** features are implemented:
 - [ ] The site's customized dashboard contains more content that explains what is interesting about the data
 - [ ] The site allows users to toggle between different data visualizations
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
