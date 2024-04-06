@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-![ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/top-bitcoin-holders/assets/36570117/741851f5-4c4a-4803-941c-bfe4026f57b6)
+![ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/top-bitcoin-holders/assets/36570117/2b4d6721-d165-4c01-8aba-90429dd24cdf)
 
 
 ## Notes
