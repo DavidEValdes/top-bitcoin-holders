@@ -21,15 +21,12 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-
-
-
-
+![ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/top-bitcoin-holders/assets/36570117/741851f5-4c4a-4803-941c-bfe4026f57b6)
 
 
 ## Notes
 
-My api didnt have any endpoints for specific company data, had to resort to passing information into detail view through states/useLocation and not being URL navigable as I didnt want to get into Redux or using global states/react context.
+My api didn't have any endpoints for specific company data, had to resort to passing information into detail view through states/useLocation and not being URL navigable as I didnt want to get into Redux or using global states/react context.
 
 ## License
 
