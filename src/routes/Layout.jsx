@@ -1,15 +1,17 @@
-import { Outlet, Link } from "react-router-dom";
-import '../App.css'
+// src/routes/Layout.js
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from '../components/Sidebar'; // Adjust the import path as needed
+import '../App.css';
 
 const Layout = () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <Link to="/" className="home-button">Home</Link>
-        </ul>
-      </nav>
-      <Outlet />
+    
+    <div className="App">
+      <Sidebar />
+      <div className="App-content">
+        <Outlet />
+      </div>
     </div>
   );
 };

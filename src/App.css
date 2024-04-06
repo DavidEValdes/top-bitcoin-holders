@@ -7,14 +7,15 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   --backdrop-filter: blur(50px); 
-  background-image: url('https://i.pinimg.com/1200x/18/c4/3d/18c43dacb80feb708d9b5ef9c1e03c5d.jpg');
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-position: center; 
+  --background-image: url('https://i.pinimg.com/1200x/18/c4/3d/18c43dacb80feb708d9b5ef9c1e03c5d.jpg');
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); /* This variable is not defined above. You might want to change it to a color or remove this line if not needed. */
+  background-image: var(--background-image);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
   color: var(--text-color);
   font-family: var(--font-family);
   padding: 40px;
@@ -23,6 +24,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
 
 h1 {
   color: var(--primary-color);
@@ -104,40 +106,85 @@ h1 {
 
 
 
-nav {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: hsla(0, 0%, 100%, .1); /* Semi-transparent white */
-  height: 100%;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px; /* Adjust padding as needed */
-  position: fixed;
-  top: 0;
-  width: 250px; /* Adjust based on your design */
-  z-index: 1000; /* Ensure sidebar is above other content */
+
+/* Add this to App.css */
+.App-sidebar {
+  width: 250px;
+  /* Dark blue background */
+  color: #FFFFFF;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.home-link 
-{
-  border:1px dotted white;
-  background:#1d1f1d;
-  width:75px;
+.Header {
+  display: flex;
+  align-items: center;
 }
 
-.home-button {
-  padding: 10px;
-  text-decoration: none; /* Removes underline */
-  transition: color 0.2s ease-in-out;
-  font-size: 25px;
-  color: black;
-  border-radius: 90px;
-  border: 4px dotted #f7931a;
-  background-color: white;
+.Logo {
+  width: 50px; /* Adjust as needed */
+  margin-right: 10px;
 }
 
-.home-button:hover {
-  color: var(--secondary-color); /* Changes text color on hover */
+.Header-title {
+  font-size: 24px;
 }
 
+.Menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
 
+.Menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Rest of the App.css styles */
+/* ... */
+
+
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+.App-content {
+  flex-grow: 1;
+  overflow: auto;
+  background: url('https://i.pinimg.com/1200x/18/c4/3d/18c43dacb80feb708d9b5ef9c1e03c5d.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+/* This will hide scrollbars in Webkit-based browsers (Chrome, Safari, newer versions of Opera) */
+.App-content::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.App-content {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow: auto; /* Scrollable contents */
+}
+
+/* To make background transparent, remove the background image and set a transparent background color */
+.App-content {
+  background: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency with the alpha value (0 is fully transparent, 1 is opaque) */
+}
