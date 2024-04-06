@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: var(--bg-color); /* This variable is not defined above. You might want to change it to a color or remove this line if not needed. */
+  background-color: var(--bg-color); 
   background-image: var(--background-image);
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -47,12 +47,12 @@ h1 {
   backdrop-filter: var(--backdrop-filter);
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.3s ease;
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  box-sizing: border-box; 
 }
 
 .input-field:focus, .select-field:focus {
   transform: scale(1);
-  z-index: 1; /* Ensure the focused input appears above other elements */
+  z-index: 1; 
   
 }
 
@@ -114,8 +114,6 @@ h1 {
 
 
 
-
-/* Add this to App.css */
 .App-sidebar {
   width: 250px;
   color: #FFFFFF;
@@ -131,7 +129,7 @@ h1 {
 }
 
 .Logo {
-  width: 50px; /* Adjust as needed */
+  width: 50px; 
   margin-right: 10px;
 }
 
@@ -162,9 +160,6 @@ h1 {
   font-size: 20px;
   margin-right: 10px;
 }
-
-/* Rest of the App.css styles */
-/* ... */
 
 
 
@@ -214,8 +209,8 @@ h1 {
 }
 
 .card-link {
-  text-decoration: none; /* Removes the underline from the link */
-  color: inherit; /* Inherits the text color from the parent */
+  text-decoration: none; 
+  color: inherit; 
   cursor: pointer; 
 }
 

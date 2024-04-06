@@ -15,15 +15,14 @@ const CompanyDetail = () => {
   let location = useLocation();
   const company = location.state.company;
 
-  // Check if initial value is available
+  
   const initialValueAvailable = company.total_entry_value_usd > 0;
 
-  // Calculate percent change
   const percentChange = initialValueAvailable
     ? ((company.total_current_value_usd - company.total_entry_value_usd) / company.total_entry_value_usd) * 100
     : null;
 
-  // Data for the line chart
+  
   const data = initialValueAvailable
     ? [
         { name: 'Buy In', value: company.total_entry_value_usd },
@@ -68,7 +67,7 @@ const CompanyDetail = () => {
               <YAxis
                 stroke="var(--primary-color)"
                 tickFormatter={(value) => `$${value.toLocaleString()}`}
-                tick={{ fontSize: 12 }} // Adjust the font size as needed
+                tick={{ fontSize: 12 }} 
               />
               <Tooltip
                 wrapperStyle={{

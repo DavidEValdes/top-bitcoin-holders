@@ -1,7 +1,6 @@
-// src/routes/Layout.js
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Sidebar from '../components/Sidebar'; // Adjust the import path as needed
+import Sidebar from '../components/Sidebar'; 
 import '../App.css';
 
 const Layout = () => {

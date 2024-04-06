@@ -1,7 +1,6 @@
-// src/components/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css'; // Assuming your CSS file is named App.css
+import '../App.css'; 
 
 const Sidebar = () => {
   return (
@@ -22,7 +21,6 @@ const Sidebar = () => {
               <div>ℹ️ About</div>
             </Link>
           </li>
-          {/* Repeat for other menu items */}
         </ul>
       </div>
     </div>
