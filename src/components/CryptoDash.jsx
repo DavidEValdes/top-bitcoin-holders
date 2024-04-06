@@ -1,6 +1,24 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  AreaChart,
+  Area,
+  ScatterChart,
+  Scatter
+} from 'recharts';
+
+
 
 const CryptoDash = () => {
   const [companies, setCompanies] = useState([]);
@@ -8,7 +26,8 @@ const CryptoDash = () => {
   const [filterCountry, setFilterCountry] = useState('All');
   const [minimumHoldings, setMinimumHoldings] = useState(0);
   const [bitcoinValue, setBitcoinValue] = useState(0);
-
+  const [totalValueUsd, setTotalValueUsd] = useState(0);
+  const [marketCapDominance, setMarketCapDominance] = useState(0);
 
 
   useEffect(() => {
@@ -19,6 +38,8 @@ const CryptoDash = () => {
             'x-cg-demo-api-key': import.meta.env.VITE_API_KEY
           }
         });
+        setMarketCapDominance(result.data.market_cap_dominance)
+        setTotalValueUsd(result.data.total_value_usd);
         setCompanies(result.data.companies);
       } catch (error) {
         console.error('Error fetching data from CoinGecko:', error);
@@ -27,8 +48,30 @@ const CryptoDash = () => {
     fetchData();
   }, []);
 
-
+  const calculateAverageProfitPercentage = (companies) => {
+    // Filter out companies with no initial investment to avoid division by zero
+    const companiesWithInvestment = companies.filter(company => company.total_entry_value_usd > 0);
   
+    // Calculate total profit percentage
+    const totalProfitPercentage = companiesWithInvestment.reduce((acc, company) => {
+      // Calculate profit for each company
+      const profitUSD = company.total_current_value_usd - company.total_entry_value_usd;
+      // Calculate profit percentage for each company and add it to the accumulator
+      const profitPercentage = (profitUSD / company.total_entry_value_usd) * 100;
+      return acc + profitPercentage;
+    }, 0);
+  
+    // Calculate average profit percentage
+    const averageProfitPercentage = totalProfitPercentage / companiesWithInvestment.length;
+  
+    return averageProfitPercentage;
+  };
+  
+  const averageProfitPercentage = calculateAverageProfitPercentage(companies);
+
+  const numberOfCompanies = companies.length;
+
+
 
   const filteredCompanies = companies.filter(company =>
     (filterCountry === 'All' || company.country === filterCountry) &&
@@ -60,11 +103,7 @@ const CryptoDash = () => {
       justifyContent: 'center', 
       alignItems: 'center' 
     }}>
-      <img 
-        src="https://1000logos.net/wp-content/uploads/2018/04/Color-Bitcoin-Logo-500x281.jpg" 
-        alt="Bitcoin Logo" 
-        style={{ width: '200px', }} 
-      />
+      
     </div>
 
       <h1>Top Public Bitcoin Holders </h1>
@@ -118,8 +157,14 @@ const CryptoDash = () => {
         ${Number(bitcoinValue).toLocaleString('en-US')}
       </label>
       <div>
+      <p>Total Value of $<span className="value">{totalValueUsd.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Owned by {numberOfCompanies} Companies</p>
+      <p> Average profit made {averageProfitPercentage.toFixed(1)}%</p>
       <p>Total Companies: {totalCompanies}</p>
-      <p>Total Percentage of Total Supply: {totalPercentOwned.toFixed(3)}%</p>
+      <p>Total Percentage of Total Supply of Bitcoin: {totalPercentOwned.toFixed(3)}%</p>
+      <p>Total Market Cap Dominance: {marketCapDominance} %</p>
+      
+      
+      </div>
       
       <div style={{ marginLeft: '45px', marginRight: '100px', marginTop: '40px', marginBottom: '40px' }}> {/* Adjust the margin values as needed */}
       <ResponsiveContainer width="100%" height={300}>
@@ -154,12 +199,12 @@ const CryptoDash = () => {
       </ResponsiveContainer>
       </div>
       
-
+      
       <br></br>
       <br></br>
 
 
-      </div>
+      
       <ul className="no-bullets">
         {filteredCompanies.map((company, index) => (
           <li key={index} className="card">
