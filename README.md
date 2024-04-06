@@ -1,10 +1,10 @@
-# Web Development Project 6 - *Name of App Here*
+# Web Development Project 6 - *Top Public Company Bitcoin Holders*
 
-Submitted by: **Your Name Here**
+Submitted by: **David Valdes**
 
-This web app: **insert description**
+This web app: **Tracks the top public company bitcoin holders and their current and entry values**
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
@@ -14,26 +14,26 @@ The following **required** functionality is completed:
 - [X] **Clicking on an item in the list view displays more details about it**
 - [X] **Clicking on an item has a direct, unique link to that item's detail view page**
 
-
 The following **optional** features are implemented:
 
-- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [X] The site's customized dashboard contains more content that explains what is interesting about the data
 - [ ] The site allows users to toggle between different data visualizations
-
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+
+
+
 
 
 
 ## Notes
 
-My api didnt have any endpoints for specific company data, had to resort to passing information through states and not being URL navigable as I didnt want to get into Redux just yet or using a global state.
+My api didnt have any endpoints for specific company data, had to resort to passing information into detail view through states/useLocation and not being URL navigable as I didnt want to get into Redux or using global states/react context.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [David Valdes]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
