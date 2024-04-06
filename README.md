@@ -2,7 +2,7 @@
 
 Submitted by: **David Valdes**
 
-This web app: **Tracks the top public company bitcoin holders and their current and entry values**
+This web app: **Tracks the top public company bitcoin holders and their current and entry price values**
 
 Time spent: **15** hours spent in total
 
