@@ -23,11 +23,6 @@ The following **optional** features are implemented:
 
 ![ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/top-bitcoin-holders/assets/36570117/2b4d6721-d165-4c01-8aba-90429dd24cdf)
 
-
-## Notes
-
-My api didn't have any endpoints for specific company data, had to resort to passing information into detail view through states/useLocation and not being URL navigable as I didnt want to get into Redux or using global states/react context.
-
 ## License
 
     Copyright [2024] [David Valdes]
