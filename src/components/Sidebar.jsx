@@ -16,11 +16,7 @@ const Sidebar = () => {
               <div>🏠 Dashboard</div>
             </Link>
           </li>
-          <li className="Menu-item">
-            <Link to="/" className="menu-link">
-              <div>ℹ️ About</div>
-            </Link>
-          </li>
+         
         </ul>
       </div>
     </div>
