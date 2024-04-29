@@ -2,9 +2,11 @@
 
 Submitted by: **David Valdes**
 
-This web app: **Tracks the top public company bitcoin holders and their current and entry values**
+This web app: **Tracks the top public company bitcoin holders and their current and entry price values**
 
 Time spent: **15** hours spent in total
+
+🔗 https://top-bitcoin-holders.vercel.app
 
 ## Required Features
 
@@ -21,15 +23,8 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
+![ezgif com-video-to-gif-converter](https://github.com/DavidEValdes/top-bitcoin-holders/assets/36570117/2b4d6721-d165-4c01-8aba-90429dd24cdf)
 
-
-
-
-
-
-## Notes
-
-My api didnt have any endpoints for specific company data, had to resort to passing information into detail view through states/useLocation and not being URL navigable as I didnt want to get into Redux or using global states/react context.
 
 ## License
 
