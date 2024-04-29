@@ -6,6 +6,8 @@ This web app: **Tracks the top public company bitcoin holders and their current 
 
 Time spent: **15** hours spent in total
 
+🔗 https://top-bitcoin-holders.vercel.app
+
 ## Required Features
 
 The following **required** functionality is completed:
