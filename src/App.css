@@ -25,7 +25,6 @@ body {
   min-height: 100vh;
 }
 
-
 h1 {
   color: var(--primary-color);
   margin-bottom: 2rem;
@@ -53,7 +52,6 @@ h1 {
 .input-field:focus, .select-field:focus {
   transform: scale(1);
   z-index: 1; 
-  
 }
 
 .card {
@@ -82,21 +80,19 @@ h1 {
   font-size: 1rem; 
 }
 
-.holdings{
+.holdings {
   font-weight: bold; 
-  color:#f2ff00;
+  color: #f2ff00;
   font-size: 18px;
 }
 
-.value{
-
+.value {
   font-weight: bold; 
-  color:#85BB65;
+  color: #85BB65;
   font-size: 18px;
 }
 
-.value2{
-
+.value2 {
   font-weight: bold; 
   color: orange;
   font-size: 18px;
@@ -111,8 +107,6 @@ h1 {
   padding: 0;
   margin: 0;
 }
-
-
 
 .App-sidebar {
   width: 250px;
@@ -153,15 +147,12 @@ h1 {
   text-decoration: none;
   display: flex;
   align-items: center;
-  
 }
 
 .menu-icon {
   font-size: 20px;
   margin-right: 10px;
 }
-
-
 
 .App {
   display: flex;
@@ -171,27 +162,19 @@ h1 {
 .App-content {
   flex-grow: 1;
   overflow: auto;
-  background: url('https://i.pinimg.com/1200x/18/c4/3d/18c43dacb80feb708d9b5ef9c1e03c5d.jpg') center center no-repeat;
-  background-size: cover;
-}
-
-/* This will hide scrollbars in Webkit-based browsers (Chrome, Safari, newer versions of Opera) */
-.App-content::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
-
-.App-content {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow: auto; /* Scrollable contents */
-}
-
-/* To make background transparent, remove the background image and set a transparent background color */
-.App-content {
   background: none;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency with the alpha value (0 is fully transparent, 1 is opaque) */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+.App-content::-webkit-scrollbar {
+  display: none;
+}
+
+.App-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+}
 
 .detail-link {
   display: inline-block;
@@ -236,25 +219,6 @@ h1 {
   justify-content: center;
 }
 
-.crypto-stats {
-  background-color: var(--card-bg-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  backdrop-filter: var(--backdrop-filter);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 20px;
-  margin: 20px;
-  font-family: var(--font-family);
-}
-
-.bar-chart-container {
-  margin-left: 45px;
-  margin-right: 100px;
-  margin-top: 40px;
-  margin-bottom: 100px;
-}
-
-
 .slider-label {
   display: flex;
   flex-direction: column;
@@ -296,9 +260,55 @@ h1 {
   margin-top: 5px;
 }
 
+/* Updated styles for responsive design */
 .crypto-stats-box {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bar-chart-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 100px;
+}
+
+.crypto-stats {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: 20px auto;
+  font-family: var(--font-family);
+  width: 80%;
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .crypto-stats-box,
+  .crypto-stats,
+  .bar-chart-container {
+    width: 95%;
+  }
+
+  .bar-chart-container {
+    margin: 20px auto 50px;
+  }
+
+  .card {
+    min-width: unset;
+    width: 95%;
+  }
+}
+
+.recharts-responsive-container {
+  width: 100% !important;
+  height: 300px !important;
 }
