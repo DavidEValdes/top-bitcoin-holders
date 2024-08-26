@@ -23,6 +23,12 @@ const CryptoDash = () => {
   return (
     <div className="dashboard-content">
       <h1>Top Public Bitcoin Holders</h1>
+      <div className="crypto-stats">
+        <p>Total Value of $<span className="value">{totalValueUsd.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Owned in <span className = "value2">{totalBitcoin.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Bitcoin by {numberOfCompanies} Companies</p>
+        <p> Average Profit Made: {averageProfitPercentage.toFixed(1)}%</p>
+
+        <p>Total Market Cap Dominance: {marketCapDominance}%</p>
+      </div>
 
       <div className="bar-chart-container">
         <ResponsiveContainer width="100%" height={300}>
@@ -84,7 +90,7 @@ const CryptoDash = () => {
             <li className="card">
               <h1>{company.name}</h1>
               <p>
-                Holds <span className="holdings">{company.total_holdings}</span> Bitcoins
+                Holds <span className="holdings">{Number(company.total_holdings).toLocaleString()}</span> Bitcoins
                 valued at $<span className="value">{company.total_current_value_usd.toLocaleString()}</span>
               </p>
               <ul>

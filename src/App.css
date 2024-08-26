@@ -312,3 +312,13 @@ h1 {
   width: 100% !important;
   height: 300px !important;
 }
+
+.dynamic-stat {
+  font-weight: bold;
+  color: #ffffff; /* Bitcoin orange color */
+}
+
+.highlight {
+  font-weight: bold;
+  color: #f7931a; /* Bitcoin orange color */
+}

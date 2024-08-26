@@ -36,7 +36,7 @@ const CompanyDetail = () => {
         <h1>{company.name}</h1>
         <p>Symbol: {company.symbol}</p>
         <p>Country: {company.country}</p>
-        <p>Bitcoin Holdings: {company.total_holdings}</p>
+        <p>Bitcoin Holdings: {company.total_holdings.toLocaleString()}</p>
         <p>Total Entry Value: {initialValueAvailable ? `$${company.total_entry_value_usd.toLocaleString()}` : 'N/A'}</p>
         <p>Current Value of Bitcoin Held: ${company.total_current_value_usd.toLocaleString()}</p>
         <p>Percentage of Total Supply Held: {company.percentage_of_total_supply}%</p>

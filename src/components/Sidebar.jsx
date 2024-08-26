@@ -25,7 +25,7 @@ const Sidebar = ({
       </div>
       <div className="Menu">
         <div className="Menu-item">
-          <Link to="/" className="menu-link">Dashboard</Link>
+          <Link to="/" className="menu-link">🏠 Dashboard</Link>
         </div>
         <div className="Menu-item">
           <input
@@ -82,12 +82,9 @@ const Sidebar = ({
         </div>
         <div className="Menu-item">
           <div className="crypto-stats-box">
-            <p>Total Companies: {totalCompanies}</p>
-            <p>Total % of Bitcoin Supply: {totalPercentOwned.toFixed(3)}%</p>
-            <p>Total Value: ${totalValueUsd.toLocaleString('en-US', { maximumFractionDigits: 0 })}</p>
-            <p>Total Bitcoin: {totalBitcoin.toLocaleString('en-US', { maximumFractionDigits: 0 })}</p>
-            <p>Avg Profit: {averageProfitPercentage.toFixed(1)}%</p>
-            <p>Market Cap Dominance: {marketCapDominance}%</p>
+            <p className="dynamic-stat">Total Companies: <span className="highlight">{totalCompanies}</span></p>
+            <p className="dynamic-stat">Total % of Bitcoin Supply: <span className="highlight">{totalPercentOwned.toFixed(3)}%</span></p>
+            
           </div>
         </div>
       </div>
