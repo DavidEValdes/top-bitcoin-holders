@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
-import Sidebar from '../components/Sidebar';
-import axios from 'axios';
-import '../App.css';
+import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Sidebar"; 
+import axios from "axios";
+import "../App.css";
 
 const Layout = () => {
   const [companies, setCompanies] = useState([]);
@@ -56,16 +56,12 @@ const Layout = () => {
   const totalCompanies = filteredCompanies.length;
   const totalPercentOwned = filteredCompanies.reduce((acc, curr) => acc + parseFloat(curr.percentage_of_total_supply), 0);
 
-  const handleCountryChange = (e) => {
-    setFilterCountry(e.target.value);
-  };
-
   return (
     <div className="App">
       <Sidebar
         setSearchTerm={setSearchTerm}
         filterCountry={filterCountry}
-        handleCountryChange={handleCountryChange}
+        setFilterCountry={setFilterCountry}
         minimumHoldings={minimumHoldings}
         setMinimumHoldings={setMinimumHoldings}
         bitcoinValue={bitcoinValue}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Sidebar = ({
   setSearchTerm,
   filterCountry,
-  handleCountryChange,
+  setFilterCountry,
   minimumHoldings,
   setMinimumHoldings,
   bitcoinValue,
@@ -36,7 +36,11 @@ const Sidebar = ({
           />
         </div>
         <div className="Menu-item">
-          <select onChange={handleCountryChange} value={filterCountry} className="select-field">
+          <select 
+            onChange={(e) => setFilterCountry(e.target.value)} 
+            value={filterCountry} 
+            className="select-field"
+          >
             <option value="All">All Countries</option>
             <option value="US">United States</option>
             <option value="CA">Canada</option>
