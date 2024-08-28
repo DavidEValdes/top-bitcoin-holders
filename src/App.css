@@ -161,9 +161,13 @@ h1 {
 
 .App-content {
   flex-grow: 1;
-  overflow: auto;
-  background: none;
+  
+  padding: 30px;
+  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-content::-webkit-scrollbar {
@@ -301,7 +305,8 @@ h1 {
   }
 
   .bar-chart-container {
-    margin: 20px auto 50px;
+    margin: 20px 0px 50px;
+    
   }
 
   .card {
