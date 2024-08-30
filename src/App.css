@@ -332,9 +332,7 @@ h1 {
 /* Mobile adjustments */
 @media (max-width: 768px) {
 
-  * {
-    box-sizing: border-box;
-  }
+
   body {
     padding: 20px;
   }
