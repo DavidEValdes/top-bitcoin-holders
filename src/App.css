@@ -348,8 +348,32 @@ h1 {
   }
 
   .App-content {
-    margin-left: 0;
+    overflow-y: scroll; /* Ensure scrolling is enabled */
     padding: 15px;
+  }
+
+  .App-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .App-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Track color */
+    border-radius: 10px;
+  }
+
+  .App-content::-webkit-scrollbar-thumb {
+    background: #f7931a; /* Bitcoin orange color for the scrollbar thumb */
+    border-radius: 10px;
+  }
+
+  .App-content::-webkit-scrollbar-thumb:hover {
+    background: #e5831a; /* Darker orange when hovering */
+  }
+
+  /* For Firefox */
+  .App-content {
+    scrollbar-width: thin;
+    scrollbar-color: #f7931a rgba(255, 255, 255, 0.1);
   }
 
   .card {
