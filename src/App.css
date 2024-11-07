@@ -213,8 +213,7 @@ h1 {
   padding: 20px;
   margin: 20px;
   font-family: var(--font-family);
-  
-  width: 50rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
