@@ -89,13 +89,21 @@ const CompanyDetail = () => {
                 angle={-45}
                 textAnchor="end"
                 height={70}
-                tick={{ fontSize: '12px' }}
+                tick={{ 
+                  fontSize: '17px',
+                  fontWeight: 500,
+                  fill: '#ffffff'
+                }}
               />
               <YAxis
                 stroke="#ffffff"
                 tickFormatter={(value) => `$${value.toLocaleString()}`}
                 domain={[minValue - padding, maxValue + padding]}
-                tick={{ fontSize: '12px' }}
+                tick={{ 
+                  fontSize: '17px',
+                  fontWeight: 500,
+                  fill: '#ffffff'
+                }}
               />
               <Tooltip
                 contentStyle={{
@@ -103,11 +111,22 @@ const CompanyDetail = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '8px',
                   backdropFilter: 'blur(10px)',
+                  fontSize: '16px',
+                  padding: '10px'
                 }}
-                labelStyle={{ color: '#ffffff' }}
+                labelStyle={{ 
+                  color: '#ffffff',
+                  fontSize: '16px',
+                  fontWeight: 500
+                }}
                 formatter={(value) => [`$${value.toLocaleString()}`, 'Value']}
               />
-              <Legend />
+              <Legend 
+                wrapperStyle={{
+                  fontSize: '16px',
+                  fontWeight: 500
+                }}
+              />
               <Line
                 type="linear"
                 dataKey="value"
