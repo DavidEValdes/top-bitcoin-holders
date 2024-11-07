@@ -24,11 +24,21 @@ const CryptoDash = () => {
     <div className="dashboard-content">
       <h1>Top Public Bitcoin Holders</h1>
       <div className="crypto-stats">
-        <p>Total Value of $<span className="value">{totalValueUsd.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Owned in <span className="value2">{totalBitcoin.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Bitcoin by {numberOfCompanies} Companies</p>
-        <p>Average Profit Made: {averageProfitPercentage.toFixed(1)}%</p>
-        <p>Total Market Cap Dominance: {marketCapDominance}%</p>
-        <p>Total Market Cap Dominance: {marketCapDominance}%</p>
-      </div>
+  <p>Total Value of $<span className="value">{totalValueUsd.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Owned in <span className="value2">{totalBitcoin.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Bitcoin by {numberOfCompanies} Companies</p>
+  <p>Average Profit Made: {averageProfitPercentage.toFixed(1)}%</p>
+  <p style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <span>Total Market Cap Dominance: {marketCapDominance}%</span>
+    <span style={{
+      color: '#f7931a',
+      fontSize: '0.9rem',
+      fontStyle: 'italic',
+      padding: '5px 10px',
+      border: '1px solid rgba(247, 147, 26, 0.3)',
+      borderRadius: '8px',
+      background: 'rgba(255, 255, 255, .1)',
+    }}>Updated Weekly</span>
+  </p>
+</div>
 
       {companies.length > 0 && (
         <div className="bar-chart-container">
