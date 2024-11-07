@@ -4,7 +4,7 @@ Submitted by: **David Valdes**
 
 This web app: **Tracks the top public company bitcoin holders and their current and entry price values**
 
-Time spent: **20** hours spent in total
+Time spent: **20+** hours spent in total
 
 🔗 https://top-bitcoin-holders.vercel.app
 
