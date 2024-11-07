@@ -251,7 +251,7 @@ Add these new classes to your existing CSS */
 .value-line {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: drawLine 1s ease-in-out forwards;
+  animation: drawLine 3s ease-in-out forwards;
 }
 
 @keyframes drawLine {
