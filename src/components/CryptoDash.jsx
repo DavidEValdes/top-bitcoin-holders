@@ -30,7 +30,7 @@ const CryptoDash = () => {
     <span>Total Market Cap Dominance: {marketCapDominance}%</span>
     <span style={{
       color: '#f7931a',
-      fontSize: '0.9rem',
+      fontSize: '.9rem',
       fontStyle: 'italic',
       padding: '5px 10px',
       border: '1px solid rgba(247, 147, 26, 0.3)',
