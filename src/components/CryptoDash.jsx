@@ -27,6 +27,7 @@ const CryptoDash = () => {
         <p>Total Value of $<span className="value">{totalValueUsd.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Owned in <span className="value2">{totalBitcoin.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span> Bitcoin by {numberOfCompanies} Companies</p>
         <p>Average Profit Made: {averageProfitPercentage.toFixed(1)}%</p>
         <p>Total Market Cap Dominance: {marketCapDominance}%</p>
+        <p>Total Market Cap Dominance: {marketCapDominance}%</p>
       </div>
 
       {companies.length > 0 && (

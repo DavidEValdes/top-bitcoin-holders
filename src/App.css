@@ -27,6 +27,9 @@ body {
  
 }
 
+
+
+
 h1 {
   color: var(--primary-color);
   margin-bottom: 2rem;
@@ -524,5 +527,149 @@ Add these new classes to your existing CSS */
 
   .recharts-responsive-container {
     height: 250px !important;
+  }
+}
+.mobile-warning-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mobile-warning-content {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 1px solid #f7931a;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  position: static;
+  transform: none;
+  margin: 0;
+}
+
+.bitcoin-icon {
+  font-size: 4rem;
+  color: #f7931a;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(247, 147, 26, 0.5);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.mobile-warning-content h2 {
+  color: #f7931a;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.mobile-warning-content p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Screen size media queries */
+@media screen and (max-width: 768px) {
+  .mobile-warning-overlay {
+    display: flex;
+  }
+
+  .App {
+    display: none !important;
+  }
+
+  .mobile-warning-content {
+    padding: 1.5rem;
+    width: 85%;
+  }
+
+  .mobile-warning-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-warning-content p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .bitcoin-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* For smaller phones */
+@media (max-width: 380px) {
+  .mobile-warning-content {
+    padding: 1.2rem;
+    width: 90%;
+  }
+
+  .mobile-warning-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .mobile-warning-content p {
+    font-size: 0.9rem;
+  }
+
+  .bitcoin-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Handle landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobile-warning-content {
+    padding: 1rem;
+  }
+
+  .bitcoin-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-warning-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-warning-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Desktop media query */
+@media screen and (min-width: 769px) {
+  .mobile-warning-overlay {
+    display: none;
+  }
+
+  .App {
+    display: flex !important;
   }
 }
