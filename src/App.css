@@ -209,21 +209,114 @@ h1 {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   backdrop-filter: var(--backdrop-filter);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid #f7931a;
   padding: 20px;
   margin: 20px;
   font-family: var(--font-family);
+  
+  width: 50rem;
+  margin: 0 auto;
 }
 
 .detail-info {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
-.chart-container {
+/* Add these new classes */
+.info-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 1rem;
 }
 
+.info-value {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.info-value.positive {
+  color: #85BB65; /* Matching your existing green */
+}
+
+
+Add these new classes to your existing CSS */
+.value-chart {
+  position: relative;
+  overflow: hidden;
+}
+
+.value-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 1s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* For Firefox compatibility */
+@-moz-keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* For Safari compatibility */
+@-webkit-keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.info-value.negative {
+  color: #ff0000;
+}
+
+.no-data-message {
+  color: #ff9900;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+
+/* Update existing chart-container class */
+.chart-container {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  margin-top: 2rem;
+}
+/* Add specific chart styling */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--secondary-color);
+  stroke-opacity: 0.2;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: var(--card-bg-color) !important;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.recharts-default-tooltip {
+  background-color: var(--card-bg-color) !important;
+  border: none !important;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+}
 .slider-label {
   display: flex;
   flex-direction: column;
@@ -331,6 +424,30 @@ h1 {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+
+  .detail-container {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .chart-container {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .detail-info h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
 
   body {
