@@ -36,7 +36,7 @@ const CryptoDash = () => {
       border: '1px solid rgba(247, 147, 26, 0.3)',
       borderRadius: '8px',
       background: 'rgba(255, 255, 255, .1)',
-    }}>Updated Weekly</span>
+    }}>Updated Daily</span>
   </p>
 </div>
 
